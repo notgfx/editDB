@@ -69,13 +69,24 @@ with sqlite3.connect(db_name) as connect_db:
             print(f'Alright, table "{db_table_name}" is NOT deleted')
 
 
-    # delete_db_table() #удаляем таблицу из базы
-    create_table_if_not_exists() #создаем таблицу, если ее нет
-    # add_customer('123') #добавляем в базу клиента
+    # delete_db_table()  # удаляем таблицу из базы
+    # create_table_if_not_exists()  # создаем таблицу, если ее нет
+    # add_customer('123')  # добавляем в базу клиента 123
     # add_db_line()  # должно добавить в базу строчку с данными из инпута
-    commit #сохраняем изменения бд еще раз, на всякий
-    #show_all_rows()
+    # commit  # сохраняем изменения бд
+    # show_all_rows() # делаем вывод всего, что есть в таблице
 
-add_customer('321')
+    # Чистим все после экспериментов
+    # delete_db_table()
+
+    # Кейс 1
+    # create_table_if_not_exists()
+    # add_customer('123')
+    # commit
+    # show_all_rows()
+
+# Кейс 2
+create_table_if_not_exists()
+# add_customer('321')
 commit
 show_all_rows()
