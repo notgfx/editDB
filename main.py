@@ -1,9 +1,7 @@
 import sqlite3
 
-
 db_name = 'the_base.db'
 db_table_name = 'customers'
-
 
 with sqlite3.connect(db_name) as connect_db:
     # connect_db.row_factory = sqlite3.Row #for raw view
@@ -70,10 +68,14 @@ with sqlite3.connect(db_name) as connect_db:
         else:
             print(f'Alright, table "{db_table_name}" is NOT deleted')
 
-    # delete_db_table()
-    # create_table_if_not_exists()
-    # add_customer('324')
-    # commit
-    # add_db_line()
 
+    # delete_db_table() #удаляем таблицу из базы
+    create_table_if_not_exists() #создаем таблицу, если ее нет
+    # add_customer('123') #добавляем в базу клиента
+    # add_db_line()  # должно добавить в базу строчку с данными из инпута
+    commit #сохраняем изменения бд еще раз, на всякий
+    #show_all_rows()
+
+add_customer('321')
+commit
 show_all_rows()
